@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+      <PackageReference Include="FunctionalConcepts" Version="1.0.0" />
+    <ProjectReference Include="..\..\src\FunctionalConcepts.csproj" />
+  </ItemGroup>
+
+</Project>

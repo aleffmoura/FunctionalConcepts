@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Functional Concepts</Title>
+    <Authors>Aleff Moura</Authors>
+    <Description>Desenvolva de maneira funcional e fluente com o Functional Concepts. Nosso framework oferece tudo o que você precisa para desenvolver de forma funcional, utilizando Result, Option e Choice. Crie seus projetos de maneira elegante e eficiente com nossas ferramentas especializadas.</Description>
+    <Copyright></Copyright>
+    <PackageProjectUrl>https://www.nuget.org/packages/FunctionalConcepts</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <licenses>https://opensource.org/license/gpl-3-0</licenses>
+    <RepositoryUrl>https://github.com/aleffmoura/FunctionalConcepts</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Result;Results;Handling;Union:Discriminated;Functional;Option;Choices;LanguageExt;ErrorOr;MatchExpression;Fluent;Exception</PackageTags>
+    <PackageOutputPath>../artifacts/</PackageOutputPath>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+    <FileVersion>6.0.0.0</FileVersion>
+    <SignAssembly>False</SignAssembly>
+    <PackageReleaseNotes>Primeira versão lançada, versão 6.0 acompanha a versão 6 do ,NET</PackageReleaseNotes>
+    <Version>6.0.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+</Project>

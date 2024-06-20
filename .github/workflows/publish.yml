@@ -1,0 +1,27 @@
+name: publish FunctionalConcepts to nuget
+on:
+    workflow_dispatch:
+    push:
+        branches:
+            - master
+        paths:
+            - "src/**"
+jobs:
+    publish:
+        name: build, pack & publish
+        runs-on: windows-latest
+        steps:
+            - uses: actions/checkout@v2
+            - name: Setup .NET
+              uses: actions/setup-dotnet@v1
+              with:
+                  dotnet-version: 6.0.x
+            - name: Restore dependencies
+              run: dotnet restore
+            - name: Build
+              run: dotnet build -c Release --no-restore
+            # Publish
+            - name: Package
+              run: dotnet pack -c Release src/FunctionalConcepts.csproj
+            - name: Publish
+              run: dotnet nuget push .\artifacts\*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
