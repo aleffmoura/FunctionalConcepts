@@ -15,11 +15,11 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>Result;Results;Handling;Union:Discriminated;Functional;Option;Choices;LanguageExt;ErrorOr;MatchExpression;Fluent;Exception</PackageTags>
     <PackageOutputPath>../artifacts/</PackageOutputPath>
-    <AssemblyVersion>6.0.0.0</AssemblyVersion>
-    <FileVersion>6.0.0.0</FileVersion>
+    <AssemblyVersion>6.0.0.1</AssemblyVersion>
+    <FileVersion>6.0.0.1</FileVersion>
     <SignAssembly>False</SignAssembly>
-    <PackageReleaseNotes>Primeira versão lançada, versão 6.0 acompanha a versão 6 do ,NET</PackageReleaseNotes>
-    <Version>6.0.0</Version>
+    <PackageReleaseNotes>Versão 6.0.0.1 indica o inicio do projeto, com doc minima para entendimento</PackageReleaseNotes>
+    <Version>6.0.0.1</Version>
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\README.md">
