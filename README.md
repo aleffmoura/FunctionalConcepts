@@ -86,11 +86,11 @@ public async Task<Result<Success>> Handle(
     CancellationToken cancellationToken)
 {
 
-    var maybeBook = await _repositorioLivro.Get(cmd.Id);
+    var maybeBook = await _repositoryBook_.Get(cmd.Id);
 
     return await maybeBook.MatchAsync(
-        async book => Result.Of(await _repositorioLivro.Delete(book, cancellationToken)),
-        () => (NotFoundError)$"Livro com id: {solicitação.Id} não encontrado");
+        async book => Result.Of(await _repositoryBook_.Delete(book, cancellationToken)),
+        () => (NotFoundError)$"Livro com id: {cmd.Id} não encontrado");
 }
 ```
 # Criando um Result
@@ -100,7 +100,7 @@ Existem conversores implícitos de TSuccess ou de BaseError para Result<TSuccess
 ```cs
 Result<Success> resultado = Result.Success; // pode ser feito com resultado = default(Success)
 ```
-Sucess é uma estrutura vazia para representação de retorno, substituindo o "void". Será abordado no futuro.
+Success é uma estrutura vazia para representação de retorno, substituindo o "void". Será abordado no futuro.
 
 Aqui está um exemplo com classe complexa:
 
@@ -137,7 +137,7 @@ public Result<float> Operation(int a, int b)
     }
     catch(Exception ex)
     {
-        return (Code: 500, Message: "Impossível dividir por zero", Exceção: ex);
+        return (Code: 500, Message: "Impossível dividir por zero", Exception: ex);
         // também é possível retornar apenas: (500, "Impossível dividir por zero", ex)
     }
 }
