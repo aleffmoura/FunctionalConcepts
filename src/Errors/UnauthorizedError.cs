@@ -12,4 +12,7 @@ public class UnauthorizedError : BaseError
 
     public static implicit operator UnauthorizedError(string Message) => new(Message, null);
     public static implicit operator UnauthorizedError((string Message, Exception Exn) tuple) => new(tuple.Message, tuple.Exn);
+
+    public static UnauthorizedError New(string msg) => (msg);
+    public static UnauthorizedError New(string msg, Exception exn) => (msg, exn);
 }

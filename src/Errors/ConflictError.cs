@@ -12,4 +12,7 @@ public class ConflictError : BaseError
 
     public static implicit operator ConflictError(string Message) => new(Message, null);
     public static implicit operator ConflictError((string Message, Exception Exn) tuple) => new(tuple.Message, tuple.Exn);
+
+    public static ConflictError New(string msg) => msg;
+    public static ConflictError New(string msg, Exception exn) => (msg, exn);
 }

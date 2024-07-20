@@ -12,4 +12,7 @@ public class UnhandledError : BaseError
 
     public static implicit operator UnhandledError(string Message) => new(Message, null);
     public static implicit operator UnhandledError((string Message, Exception Exn) tuple) => new(tuple.Message, tuple.Exn);
+
+    public static UnhandledError New(string msg) => (msg);
+    public static UnhandledError New(string msg, Exception exn) => (msg, exn);
 }

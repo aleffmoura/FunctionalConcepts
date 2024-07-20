@@ -15,11 +15,11 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>Result;Results;Handling;Union:Discriminated;Functional;Option;Choices;LanguageExt;ErrorOr;MatchExpression;Fluent;Exception</PackageTags>
     <PackageOutputPath>../artifacts/</PackageOutputPath>
-    <AssemblyVersion>6.0.0.1</AssemblyVersion>
-    <FileVersion>6.0.0.1</FileVersion>
+    <AssemblyVersion>6.0.0.2</AssemblyVersion>
+    <FileVersion>6.0.0.2</FileVersion>
     <SignAssembly>False</SignAssembly>
-    <PackageReleaseNotes>Versão 6.0.0.1 indica o inicio do projeto, com doc minima para entendimento</PackageReleaseNotes>
-    <Version>6.0.0.1</Version>
+    <PackageReleaseNotes>Versão 6.0.0.2 adicionado funções staticas</PackageReleaseNotes>
+    <Version>6.0.0.2</Version>
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\README.md">

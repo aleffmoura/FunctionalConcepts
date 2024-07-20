@@ -12,4 +12,7 @@ public class NotFoundError : BaseError
 
     public static implicit operator NotFoundError(string Message) => new(Message, null);
     public static implicit operator NotFoundError((string Message, Exception Exn) tuple) => new(tuple.Message, tuple.Exn);
+
+    public static NotFoundError New(string msg) => (msg);
+    public static NotFoundError New(string msg, Exception exn) => (msg, exn);
 }
