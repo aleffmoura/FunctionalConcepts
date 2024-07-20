@@ -16,7 +16,7 @@
     <PackageTags>Result;Results;Handling;Union:Discriminated;Functional;Option;Choices;LanguageExt;ErrorOr;MatchExpression;Fluent;Exception</PackageTags>
     <PackageOutputPath>../artifacts/</PackageOutputPath>
     <AssemblyVersion>6.0.0.2</AssemblyVersion>
-    <FileVersion>6.0.0.2/FileVersion>
+    <FileVersion>6.0.0.2</FileVersion>
     <SignAssembly>False</SignAssembly>
     <PackageReleaseNotes>Versão 6.0.0.2 adicionado funções staticas</PackageReleaseNotes>
     <Version>6.0.0.2</Version>
