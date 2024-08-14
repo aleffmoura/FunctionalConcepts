@@ -1,9 +1,27 @@
 namespace FunctionalConcepts.Results;
 public readonly partial struct Result<TEntity>
 {
-    public readonly Result<TEntity> Bind(Func<TEntity, Result<TEntity>> execute)
-        => IsSuccess ? Result.Try(_value!, execute) : _error!;
+    public readonly Result<TB> Bind<TB>(Func<TEntity, Result<TB>> execute)
+    {
+        if (IsFail)
+        {
+            return _error!;
+        }
 
-    public readonly async ValueTask<Result<TEntity>> BindAsync(Func<TEntity, Task<Result<TEntity>>> execute)
-        => IsSuccess ? await Result.TryCatch(_value, execute!) : _error!;
+        Result<TB> bind = Result.Try(_value!, execute);
+
+        return bind;
+    }
+
+    public readonly async ValueTask<Result<TB>> BindAsync<TB>(Func<TEntity, Task<Result<TB>>> execute)
+    {
+        if (IsFail)
+        {
+            return _error!;
+        }
+
+        Result<TB> bind = await Result.TryCatch(_value!, execute);
+
+        return bind;
+    }
 }
