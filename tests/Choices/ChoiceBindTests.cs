@@ -97,7 +97,7 @@ namespace FunctionalConcepts.Tests.Choices
             // action
             var binded = choice.BindLeft(value =>
             {
-                return $"bind left {value}";
+                return Choice.Of<string, int>($"bind left {value}");
             });
 
             // asserts
@@ -118,7 +118,7 @@ namespace FunctionalConcepts.Tests.Choices
             // action
             var binded = await choice.BindLeftAsync(async value =>
             {
-                return await Task.FromResult($"bind left {value}");
+                return await Task.FromResult(Choice.Of<string, int>($"bind left {value}"));
             });
 
             // asserts
@@ -138,7 +138,7 @@ namespace FunctionalConcepts.Tests.Choices
             // action
             var binded = choice.BindRight(value =>
             {
-                return value + 2;
+                return Choice.Of<string, int>(value + 2);
             });
 
             // asserts
@@ -158,7 +158,7 @@ namespace FunctionalConcepts.Tests.Choices
             // action
             var binded = choice.BindRight(value =>
             {
-                return value + 2;
+                return Choice.Of<string, decimal>(value + 2);
             });
 
             // asserts
@@ -176,7 +176,7 @@ namespace FunctionalConcepts.Tests.Choices
             Choice<string, int> choice = age;
 
             // action
-            var binded = choice.BindLeft(value => "test");
+            var binded = choice.BindLeft(value => Choice.Of<string, int>("test"));
 
             // asserts
             binded.IsLeft.Should().BeFalse();
@@ -190,13 +190,13 @@ namespace FunctionalConcepts.Tests.Choices
         {
             // arrange
             int age = 18;
-            var toCompare = age + 2;
+            decimal toCompare = age + 2;
             Choice<string, int> choice = age;
 
             // action
             var binded = await choice.BindRightAsync(async value =>
             {
-                return await Task.FromResult(value + 2);
+                return await Task.FromResult(Choice.Of<string, decimal>(value + 2));
             });
 
             // asserts

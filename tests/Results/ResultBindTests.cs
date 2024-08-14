@@ -20,10 +20,10 @@ public class ResultBindTests
         // action
         var returned = response.Bind(toBind =>
         {
-            return toBind with
+            return Result.Of(toBind with
             {
                 Msg = toUpdatedWithBind,
-            };
+            });
         });
 
         // assert
@@ -43,10 +43,10 @@ public class ResultBindTests
         // action
         var returned = await response.BindAsync(async toBind =>
         {
-            return toBind with
+            return Result.Of(toBind with
             {
                 Msg = await Task.FromResult(toUpdatedWithBind),
-            };
+            });
         });
 
         // assert
@@ -71,7 +71,7 @@ public class ResultBindTests
                 Msg = toUpdatedWithBind,
             };
 
-            return exampleTest;
+            return Result.Of(exampleTest);
         });
 
         // assert
@@ -97,7 +97,7 @@ public class ResultBindTests
                 Msg = toUpdatedWithBind,
             };
 
-            return await Task.FromResult(exampleTest);
+            return await Task.FromResult(Result.Of(exampleTest));
         });
 
         // assert

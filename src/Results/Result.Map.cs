@@ -8,7 +8,7 @@ public readonly partial struct Result<TEntity>
     {
         try
         {
-            return IsSuccess ? Result.Run(_value!, execute) : _error!;
+            return IsFail ? _error! : Result.Run(_value!, execute);
         }
         catch (Exception exn)
         {
@@ -20,7 +20,7 @@ public readonly partial struct Result<TEntity>
     {
         try
         {
-            return IsSuccess ? await Result.Run(_value!, execute) : _error!;
+            return IsFail ? _error! : await Result.Run(_value!, execute);
         }
         catch (Exception exn)
         {
