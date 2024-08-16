@@ -12,7 +12,7 @@ public readonly partial struct Result<TEntity>
         }
         catch (Exception exn)
         {
-            return (UnhandledError)("Error while Map", exn);
+            return (UnhandledError)(exn.Message, exn);
         }
     }
 
@@ -24,7 +24,7 @@ public readonly partial struct Result<TEntity>
         }
         catch (Exception exn)
         {
-            return (UnhandledError)("Error while Map", exn);
+            return (UnhandledError)(exn.Message, exn);
         }
     }
 }

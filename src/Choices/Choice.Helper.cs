@@ -20,7 +20,7 @@ public static class Choice
         }
         catch (Exception exn)
         {
-            return (UnhandledError)($"{nameof(Choice<TLeft, TRight>)}: Error while If", exn);
+            return (UnhandledError)(exn.Message, exn);
         }
     }
 
@@ -36,7 +36,7 @@ public static class Choice
         }
         catch (Exception exn)
         {
-            return (UnhandledError)($"{nameof(Choice<TLeft, TRight>)}: Error while If", exn);
+            return (UnhandledError)(exn.Message, exn);
         }
     }
 }
