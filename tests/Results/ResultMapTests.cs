@@ -11,6 +11,8 @@ using Newtonsoft.Json.Serialization;
 [TestFixture]
 public class ResultMapTests
 {
+    private static readonly string _message = "message";
+
     [Test]
     public void ResultMapTests_ResultMap_ShouldBeOk()
     {
@@ -103,7 +105,7 @@ public class ResultMapTests
     {
         // arrange
         Result<Success> result = Result.Success;
-        static ExampleTest Action(Success s) => throw new Exception();
+        static ExampleTest Action(Success s) => throw new Exception(_message);
 
         // action
         Result<ExampleTest> response = result.Map(Action);
@@ -112,7 +114,7 @@ public class ResultMapTests
         response.IsSuccess.Should().BeFalse();
         response.IsFail.Should().BeTrue();
         var msg = response.Match(some => "not return this", fail => fail.Message);
-        msg.Should().Be("Error while Map");
+        msg.Should().Be(_message);
     }
 
     [Test]
@@ -123,7 +125,7 @@ public class ResultMapTests
         static async Task<ExampleTest> Action(Success s)
         {
             await Task.Delay(1);
-            throw new Exception();
+            throw new Exception(_message);
         }
 
         // action
@@ -133,6 +135,6 @@ public class ResultMapTests
         response.IsSuccess.Should().BeFalse();
         response.IsFail.Should().BeTrue();
         var msg = response.Match(some => "not return this", fail => fail.Message);
-        msg.Should().Be("Error while Map");
+        msg.Should().Be(_message);
     }
 }
