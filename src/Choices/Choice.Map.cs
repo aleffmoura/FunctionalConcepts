@@ -14,7 +14,7 @@ public readonly partial struct Choice<TLeft, TRight>
         }
         catch (Exception exn)
         {
-            return (UnhandledError)("Error while MapLeft", exn);
+            return (UnhandledError)(exn.Message, exn);
         }
     }
 
@@ -28,7 +28,7 @@ public readonly partial struct Choice<TLeft, TRight>
         }
         catch (Exception exn)
         {
-            return (UnhandledError)("Error while MapLeft", exn);
+            return (UnhandledError)(exn.Message, exn);
         }
     }
 
@@ -42,7 +42,7 @@ public readonly partial struct Choice<TLeft, TRight>
         }
         catch (Exception exn)
         {
-            return (UnhandledError)("Error while MapRight", exn);
+            return (UnhandledError)(exn.Message, exn);
         }
     }
 
@@ -56,7 +56,7 @@ public readonly partial struct Choice<TLeft, TRight>
         }
         catch (Exception exn)
         {
-            return (UnhandledError)("Error while MapRight", exn);
+            return (UnhandledError)(exn.Message, exn);
         }
     }
 }

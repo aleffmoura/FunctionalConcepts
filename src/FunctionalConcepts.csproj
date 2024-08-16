@@ -15,11 +15,11 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>Result;Results;Handling;Union:Discriminated;Functional;Option;Choices;LanguageExt;ErrorOr;MatchExpression;Fluent;Exception</PackageTags>
     <PackageOutputPath>../artifacts/</PackageOutputPath>
-    <AssemblyVersion>6.0.0.3</AssemblyVersion>
-    <FileVersion>6.0.0.3</FileVersion>
+    <AssemblyVersion>6.0.0.4</AssemblyVersion>
+    <FileVersion>6.0.0.4</FileVersion>
     <SignAssembly>False</SignAssembly>
-    <PackageReleaseNotes>Versão 6.0.0.3 fix bind e map</PackageReleaseNotes>
-    <Version>6.0.0.3</Version>
+    <PackageReleaseNotes>Versão 6.0.0.4 fix bind e map</PackageReleaseNotes>
+    <Version>6.0.0.4</Version>
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\README.md">
