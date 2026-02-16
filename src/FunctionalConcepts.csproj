@@ -15,11 +15,11 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>Result;Results;Handling;Union:Discriminated;Functional;Option;Choices;LanguageExt;ErrorOr;MatchExpression;Fluent;Exception</PackageTags>
     <PackageOutputPath>../artifacts/</PackageOutputPath>
-    <AssemblyVersion>6.0.0.4</AssemblyVersion>
-    <FileVersion>6.0.0.4</FileVersion>
+    <AssemblyVersion>6.0.1.0</AssemblyVersion>
+    <FileVersion>6.0.1.0</FileVersion>
     <SignAssembly>False</SignAssembly>
-    <PackageReleaseNotes>Versão 6.0.0.4 fix bind e map</PackageReleaseNotes>
-    <Version>6.0.0.4</Version>
+    <PackageReleaseNotes>Versão 6.0.1.0 Extensions methods for fluency approach</PackageReleaseNotes>
+    <Version>6.0.1.0</Version>
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\README.md">
