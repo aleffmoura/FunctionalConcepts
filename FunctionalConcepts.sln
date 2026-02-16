@@ -1,11 +1,26 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.10.34916.146
+# Visual Studio Version 18
+VisualStudioVersion = 18.2.11408.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionalConcepts", "src\FunctionalConcepts.csproj", "{3E27050A-EEF9-4AF7-882C-9E79310C24BD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionalConcepts.Tests", "tests\FunctionalConcepts.Tests.csproj", "{D40C0666-2C6B-419A-A140-0C08FC4DDA47}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{E68B2130-673C-4685-A540-11643F26EDC9}"
+	ProjectSection(SolutionItems) = preProject
+		api-reference.md = api-reference.md
+		choice.md = choice.md
+		contributing.md = contributing.md
+		design-decisions.md = design-decisions.md
+		diagrams.md = diagrams.md
+		errors.md = errors.md
+		index.md = index.md
+		integrations-bookapi.md = integrations-bookapi.md
+		migration-guide.md = migration-guide.md
+		option.md = option.md
+		result.md = result.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

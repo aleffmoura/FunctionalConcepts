@@ -33,7 +33,7 @@ public class OptionIfTests
     public void OptionIfTests_IfSome_WhenNone_ShouldBeOk()
     {
         // arrange
-        Option<string> option = NoneType.Value;
+        Option<string> option = Option.None;
         string? response = null;
 
         // action
@@ -52,7 +52,7 @@ public class OptionIfTests
     public void OptionIfTests_IfNone_WhenNone_ShouldBeOk()
     {
         // arrange
-        var none = NoneType.Value;
+        var none = Option.None;
         Option<BaseError> option = none;
         var msg = "is none value";
         string? response = null;
@@ -114,7 +114,7 @@ public class OptionIfTests
     public async Task OptionIfTests_IfSomeAsync_WhenNone_ShouldBeOk()
     {
         // arrange
-        Option<string> option = NoneType.Value;
+        Option<string> option = Option.None;
         string? response = null;
 
         // action
@@ -133,7 +133,7 @@ public class OptionIfTests
     public async Task OptionIfTests_IfNoneAsync_WhenNone_ShouldBeOk()
     {
         // arrange
-        var none = NoneType.Value;
+        var none = Option.None;
         Option<BaseError> option = none;
         var msg = "is none value";
         string? response = null;

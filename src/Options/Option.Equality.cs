@@ -25,7 +25,7 @@ public readonly partial struct Option<T>
 
     public readonly override int GetHashCode()
         => IsSome ? _value!.GetHashCode()
-                  : NoneType.Value.GetHashCode();
+                  : Option.None.GetHashCode();
 
     private readonly bool Compare(T other) => _value!.Equals(other);
 }

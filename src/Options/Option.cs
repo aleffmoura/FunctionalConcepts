@@ -21,4 +21,7 @@ public readonly partial struct Option<T>
 
     public static implicit operator Option<T>(NoneType _) => _none;
     public static implicit operator Option<T>(T value) => new(value);
+
+    public static implicit operator NoneType(Option<T> _) => _none;
+    public static implicit operator T?(Option<T> opt) => opt._value;
 }

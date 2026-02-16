@@ -40,7 +40,7 @@ public class OptionMatchTests
     public async Task OptionTests_OptionMatchTests_WhenNone_MatchAsync_NoneAsync_ShouldBeOk()
     {
         // arrange
-        var value = NoneType.Value;
+        var value = Option.None;
 
         // action
         Option<string> option = value;
@@ -54,7 +54,7 @@ public class OptionMatchTests
     public async Task OptionTests_OptionMatchTests_WhenNone_MatchAsync_SomeAsync_ShouldBeOk()
     {
         // arrange
-        var value = NoneType.Value;
+        var value = Option.None;
 
         // action
         Option<string> option = value;
@@ -68,7 +68,7 @@ public class OptionMatchTests
     public async Task OptionTests_OptionMatchTests_WhenNone_MatchAsync_BothCaseAsync_ShouldBeOk()
     {
         // arrange
-        var none = NoneType.Value;
+        var none = Option.None;
 
         // action
         Option<BaseError> option = none;

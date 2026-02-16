@@ -71,4 +71,8 @@ public readonly partial struct Choice<TLeft, TRight>
     public static implicit operator Choice<TLeft, TRight>(TLeft left) => new(left);
     public static implicit operator Choice<TLeft, TRight>(TRight right) => new(right);
     public static implicit operator Choice<TLeft, TRight>(BaseError value) => new(value);
+
+    public static implicit operator TLeft?(Choice<TLeft, TRight> choice) => choice._left;
+    public static implicit operator TRight?(Choice<TLeft, TRight> choice) => choice._right;
+    public static implicit operator BaseError?(Choice<TLeft, TRight> choice) => choice._bottom;
 }

@@ -45,11 +45,14 @@ public readonly partial struct Result<TEntity>
     public readonly bool IsFail { get => !IsSuccess; }
 
     public readonly Option<BaseError> AsOptionFail
-        => IsFail ? Option.Of(_error!) : NoneType.Value;
+        => IsFail ? Option.Of(_error!) : Option.None;
 
     public readonly Option<TEntity> AsOption
-        => IsSuccess ? Option.Of(_value!) : NoneType.Value;
+        => IsSuccess ? Option.Of(_value!) : Option.None;
 
     public static implicit operator Result<TEntity>(TEntity success) => new(success);
     public static implicit operator Result<TEntity>(BaseError error) => new(error);
+
+    public static implicit operator TEntity?(Result<TEntity> result) => result._value;
+    public static implicit operator BaseError?(Result<TEntity> result) => result._error;
 }
