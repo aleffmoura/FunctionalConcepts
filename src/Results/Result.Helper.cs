@@ -2,7 +2,7 @@ namespace FunctionalConcepts.Results;
 
 using FunctionalConcepts.Errors;
 
-public static class Result
+public static partial class Result
 {
     public static Success Success => default;
 

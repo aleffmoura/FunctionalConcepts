@@ -12,7 +12,7 @@ public class OptionFailWhenTests
     {
         // arrange
         var error = "Error message";
-        Option<string> option = NoneType.Value;
+        Option<string> option = Option.None;
 
         // action
         var response = option.FailWhen(value => value.Length < 5, (InvalidObjectError)error);
@@ -35,7 +35,7 @@ public class OptionFailWhenTests
         // arrange
         var messageWhenNone = "registry not found";
         var error = "Error message";
-        Option<string> option = NoneType.Value;
+        Option<string> option = Option.None;
 
         // action
         var response = option.FailWhen(value => value.Length < 5, (InvalidObjectError)error, messageWhenNone);

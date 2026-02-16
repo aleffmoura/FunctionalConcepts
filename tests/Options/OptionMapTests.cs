@@ -38,7 +38,7 @@ public class OptionMapTests
     public void OptionMapTests_Map_StringToInt_WhenNone_ShouldBeSuccess()
     {
         // arrange
-        Option<string> maybe = NoneType.Value;
+        Option<string> maybe = Option.None;
 
         // action
         Option<int> option = maybe.Map(int.Parse);
@@ -51,7 +51,7 @@ public class OptionMapTests
     public async Task OptionMapTests_MapAsync_StringToInt_WhenNone_ShouldBeSuccess()
     {
         // arrange
-        Option<string> maybe = NoneType.Value;
+        Option<string> maybe = Option.None;
 
         // action
         Option<int> option = await maybe.MapAsync(async val => await Task.FromResult(int.Parse(val)));

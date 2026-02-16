@@ -14,7 +14,7 @@ public class OptionTests
     public void OptionTests_Implicit_Operator_NoneType_ShouldBeSuccess()
     {
         // arrange
-        var none = NoneType.Value;
+        var none = Option.None;
 
         // action
         Option<BaseError> option = none;
@@ -97,7 +97,7 @@ public class OptionTests
     public void OptionTests_MatchWitNone_ShouldBeSuccess()
     {
         // arrange
-        var none = NoneType.Value;
+        var none = Option.None;
 
         // action
         Option<BaseError> option = none;

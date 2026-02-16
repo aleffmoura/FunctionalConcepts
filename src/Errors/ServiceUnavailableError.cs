@@ -13,6 +13,6 @@ public class ServiceUnavailableError : BaseError
     public static implicit operator ServiceUnavailableError(string Message) => new(Message, null);
     public static implicit operator ServiceUnavailableError((string Message, Exception Exn) tuple) => new(tuple.Message, tuple.Exn);
 
-    public static ServiceUnavailableError New(string msg) => (msg);
+    public static ServiceUnavailableError New(string msg) => msg;
     public static ServiceUnavailableError New(string msg, Exception exn) => (msg, exn);
 }
